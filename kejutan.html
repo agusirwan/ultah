@@ -28,7 +28,7 @@
       }
 
       .birthday-photo {
-        max-width: 200px;
+        max-width: 100px;
         width: 100%;
         border-radius: 12px;
         box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
@@ -49,18 +49,20 @@
 
       @keyframes gentleFloat {
         0% {
-          transform: translateY(0);
+          transform: translateY(30) rotate(0deg);
         }
         50% {
-          transform: translateY(-5px); /* hanya naik 5px */
+          transform: translateY(20) rotate(0deg);
+        }
+        75% {
+          transform: translateY(30px) rotate(0deg);
         }
         100% {
-          transform: translateY(0);
+          transform: translateY(0) rotate(0deg);
         }
       }
 
-      /* Foto ulang tahun */
-      .birthday {
+      .birthday .photo {
         max-width: 200px;
         width: 100%;
         height: auto;
