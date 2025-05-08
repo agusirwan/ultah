@@ -67,4 +67,45 @@ body {
     width: 100%;
     height: 100%;
   }
+  canvas#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .photo-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar foto */
+    margin: 20px 0;
+  }
+  
+  .birthday{
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  @keyframes gentleFloat {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px); /* hanya naik 5px */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .birthday-photo {
+    max-width: 200px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+    animation: gentleFloat 4s ease-in-out infinite;
+  }
   

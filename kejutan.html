@@ -18,6 +18,22 @@
         display: block;
       }
 
+      .photo-row {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        text-align: center;
+      }
+
+      .birthday-photo {
+        max-width: 200px;
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+      }
+
       .text {
         position: absolute;
         top: 50%;
@@ -32,14 +48,19 @@
     </style>
   </head>
   <body>
+    <!-- Foto di atas ucapan -->
+    <div class="photo-row">
+      <img src="1.jpeg" alt="Foto Ulang Tahun" class="birthday-photo" />
+    </div>
+
+    <!-- Ucapan ulang tahun -->
     <div class="text">
       🎆 Happy Birthday 🎇<br />Hadiahnya nyusul ya <br />
       hehe
     </div>
+
+    <!-- Efek kembang api -->
     <canvas id="fireworks"></canvas>
-
-
-
 
     <script>
       // Kembang Api
