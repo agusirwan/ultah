@@ -23,7 +23,7 @@
         top: 10%;
         left: 50%;
         transform: translateX(-50%);
-        z-index: 2;
+        z-index: 1; /* Foto berada di bawah teks */
         text-align: center;
       }
 
@@ -32,6 +32,7 @@
         width: 100%;
         border-radius: 12px;
         box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+        animation: gentleFloat 4s ease-in-out infinite;
       }
 
       .text {
@@ -42,8 +43,29 @@
         color: white;
         font-size: 2em;
         text-align: center;
-        z-index: 1;
+        z-index: 2; /* Teks berada di atas foto */
         font-family: "Segoe UI", sans-serif;
+      }
+
+      @keyframes gentleFloat {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px); /* hanya naik 5px */
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      /* Foto ulang tahun */
+      .birthday {
+        max-width: 200px;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
     </style>
   </head>
